@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoD_Library_HCI_Core6", "KoD_Library_HCI_Core6\KoD_Library_HCI_Core6.csproj", "{7E42C29B-30B0-4CB8-9980-3530E830F81E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0ABE3C9A-78F2-42B1-BE45-46F5F9CCD030}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E42C29B-30B0-4CB8-9980-3530E830F81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E42C29B-30B0-4CB8-9980-3530E830F81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E42C29B-30B0-4CB8-9980-3530E830F81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E42C29B-30B0-4CB8-9980-3530E830F81E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE22F8A1-214A-43E6-9A79-71FE8C6988D9}
+	EndGlobalSection
+EndGlobal

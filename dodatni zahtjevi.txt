@@ -1,0 +1,4 @@
+Implementirani su sljedeći dodatni zahtjevi:
+1. Podrška za različite tipove korisničkih naloga - zaposleni i korisnik
+2. Korisnička podešavanja - 3 različite teme,
+3. Korisničko uputstvo.

@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="KoD_Library_HCI_Core6.Views.UserControls.NavSideBarEmployeeUC"
+             x:Name="NavSideBarEmployee"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:page="clr-namespace:KoD_Library_HCI_Core6.Views.Pages"
+             xmlns:local="clr-namespace:KoD_Library_HCI_Core6.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800" d:Height="250">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="30,0,0,0" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button x:Name = "btnKnjige"  Click="btnKnjige_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\book.png" />
+                    <TextBlock VerticalAlignment="Center" >Prikaži knjige</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name = "btnDodajNovuKnjigu" Click="btnDodajNovuKnjigu_Click" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\bookInfo.png"/>
+                    <TextBlock>Nova knjiga</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name = "btnMojaZaduzenja" Click="btnMojaZaduzenja_Click" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\bookAppIcon.png"/>
+                    <TextBlock>Zaduženja</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name = "btnNovoZaduzenje" Click="btnNovoZaduzenje_Click" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\newBook.png"/>
+                    <TextBlock>Novo zaduženje</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnKorisnickiNalozi" Click="btnKorisnickiNalozi_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\multipleUsers.png"/>
+                    <TextBlock>Korisnicki nalozi</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name = "btnMojNalog" Click="btnMojNalog_Click" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\profile.png"/>
+                    <TextBlock>Moj nalog</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name = "btnONama" Click="btnONama_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\information.png"/>
+                    <TextBlock>O nama</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

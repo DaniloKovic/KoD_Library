@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>images\book_icon_185961.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\ViewModels\**" />
+    <EmbeddedResource Remove="Models\ViewModels\**" />
+    <None Remove="Models\ViewModels\**" />
+    <Page Remove="Models\ViewModels\**" />
+  </ItemGroup>
+   
+  <ItemGroup>
+    <Content Remove="C:\Users\DaK\.nuget\packages\mysql.data.entityframework\8.0.28\contentFiles\any\netstandard2.1\app.config.transform" />
+    <Content Remove="C:\Users\DaK\.nuget\packages\mysql.data.entityframework\8.0.28\contentFiles\any\netstandard2.1\web.config.transform" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\book_icon_185961.ico" />
+    <Content Include="images\eye.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.28" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\UserControls\NavSideBarUserUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\UserControls\NavSideBarUserUC.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Exceptions\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,41 @@
+﻿<Page x:Class="KoD_Library_HCI_Core6.Views.Pages.UserAccountsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KoD_Library_HCI_Core6.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserAccountsPage">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="4"/>
+            <!-- <Setter Property="BorderBrush"  Value="Green"/> -->
+            <!-- <Setter Property="Background"  Value="LightGreen"/> -->
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Width" Value="260"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" x:Name = "dgKorisnickiNalozi" AlternatingRowBackground = "LightBlue" 
+                  SelectionMode="Single" AlternationCount = "2" AutoGenerateColumns = "False" FontSize="24" 
+                  IsReadOnly="True" Margin="5,5,5,5" 
+                  CanUserAddRows="False" CanUserResizeRows="False" SelectedIndex="0" SelectionChanged="dgKorisnickiNalozi_SelectionChanged" >
+
+            <DataGrid.Columns >
+                <DataGridTextColumn Header = "Ime i prezime" Binding = "{Binding ImePrezime}" Visibility="Visible" />
+                <DataGridTextColumn Header = "Korisničko ime" Binding = "{Binding KorisnickoIme}" TextElement.FontStyle="Oblique"/>
+                <DataGridTextColumn Header = "Broj telefona" Binding = "{Binding BrojTelefona}" />
+                <DataGridTextColumn Header = "E-mail" Binding = "{Binding EMail}" />
+                <DataGridTextColumn Header = "Datum registracije" Binding = "{Binding DatumRegistracije}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="1" x:Name="btnPrikaziDetalje" Content="Prikaži detalje" HorizontalAlignment="Right" Margin="5,5,5,5" Click="btnPrikaziDetalje_Click"/>
+    </Grid>
+</Page>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="KoD_Library_HCI_Core6.Views.Menu.KorisnikMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoD_Library_HCI_Core6.Views.UserControls"
+        xmlns:uc = "clr-namespace:KoD_Library_HCI_Core6.Views.UserControls"
+        mc:Ignorable="d"
+        Height="600" Width="800" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel x:Name="dpKorisnikImage" Grid.Row="0" Grid.Column="0" Style="{DynamicResource dpTemplateStyle1}">
+            <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\bookInfo.png" Margin="10"></Image>
+        </DockPanel>
+
+        <DockPanel x:Name="dpKorisnikSideBar" Grid.Row="1" Grid.Column="0" Style="{DynamicResource dpTemplateStyle1}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" LastChildFill="True">
+            <uc:NavSideBarUserUC/>
+        </DockPanel>
+
+        <DockPanel x:Name="dpKorisnikHeader" Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Style="{DynamicResource dpTemplateStyle1}">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56" >KoD Library</TextBlock>
+        </DockPanel>
+
+        <DockPanel x:Name="dpKorisnikFrame" Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Frame x:Name="KorisnikMenuContainer" NavigationUIVisibility="Automatic"/>
+        </DockPanel>
+
+    </Grid>
+    
+</Window>

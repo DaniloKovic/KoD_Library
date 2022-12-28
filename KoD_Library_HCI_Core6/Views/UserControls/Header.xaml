@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="KoD_Library_HCI_Core6.Views.UserControls.Header"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KoD_Library_HCI_Core6.Views.UserControls"
+             mc:Ignorable="d" d:DesignWidth="1000" d:Height="450"
+             x:Name="ucHeader">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="BlanchedAlmond">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="KoD Library" HorizontalAlignment="Right" VerticalAlignment="Center" />
+            <Button Content="SRB" HorizontalAlignment="Right" VerticalAlignment="Center" Width="60" Margin="5,5"/>
+            <Button Content="ENG" HorizontalAlignment="Right" VerticalAlignment="Center" Width="60" Margin="5,5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

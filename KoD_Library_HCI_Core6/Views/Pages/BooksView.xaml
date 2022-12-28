@@ -1,0 +1,79 @@
+﻿<Page x:Class="KoD_Library_HCI_Core6.Views.Pages.BooksView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KoD_Library_HCI_Core6.Views.Pages"
+      mc:Ignorable="d"
+      Title="BooksView" d:Height="500" d:Width="900">
+    <Page.Resources>
+        <!-- Ovako deklarisan stil se primjenjuje na svaku CheckBox komponentu unutar Page -->
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="4"/>
+            <!-- <Setter Property="BorderBrush"  Value="Green"/> -->
+            <!-- <Setter Property="Background"  Value="LightGreen"/> -->
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Width" Value="260"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="260"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="BorderThickness" Value="4"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="260"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="BorderThickness" Value="4"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Row="0" Grid.ColumnSpan="2"  x:Name = "dgKnjige" AlternatingRowBackground = "LightBlue" 
+                  SelectionMode="Single" AlternationCount = "2" AutoGenerateColumns = "False" FontSize="24" 
+                  IsReadOnly="True" Margin="5,5,5,0" 
+                  CanUserAddRows="False" CanUserResizeRows="False" SelectedIndex="0" SelectionChanged="dgKnjige_SelectionChanged" >
+
+            <DataGrid.Columns >
+                <DataGridTextColumn Header = "Br." Binding = "{Binding Id}" Visibility="Visible" />
+                <DataGridTextColumn Header = "Naslov" Binding = "{Binding Naslov}" TextElement.FontStyle="Oblique"/>
+                <DataGridTextColumn Header = "Autor" Binding = "{Binding Autori}" />
+                <DataGridTextColumn Header = "Zanr" Binding = "{Binding Zanrovi}" />
+                <DataGridCheckBoxColumn Header = "Dostupna?" Binding = "{Binding Dostupnost}"/>
+                <DataGridTextColumn Header = "Godina izdanja" Binding = "{Binding GodinaIzdanja}" />
+                <DataGridTextColumn Header = "Količina" Binding = "{Binding Kolicina}" x:Name="dgtcKolicina" Visibility="Visible" />
+                <DataGridTextColumn Header = "Dostupna kol." Binding = "{Binding DostupnaKolicina}" x:Name="dgtcDostupnaKolicina" Visibility="Visible" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <StackPanel x:Name="spBooksFilter" Grid.Row="1" Grid.Column="0" Margin="5,10,5,10">
+            <StackPanel Orientation="Horizontal" >
+                <Label>Naslov Knjige:</Label>
+                <TextBox Name="tbBookFilterByTitle" FontSize="20" Width="260"></TextBox>
+                <Label Margin="20,0,0,0" >Ime Autora:</Label>
+                <TextBox x:Name="tbFilterByAutorName" FontSize="20" Margin="5,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label>Naziv žanra:</Label>
+                <ComboBox Name="cbGenres" IsEditable="True" Width="260" Margin="20,0,0,0"></ComboBox>
+                <Button x:Name="btnFilterBooks" Content="Pretraži" Click="btnFilterBooks_Click" Margin="160,0,0,0" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="spButtons" Grid.Row="1" Grid.Column="1" Margin="5,10,5,10">
+            <Button x:Name="btnPrikaziDetalje" Click="btnPrikaziDetalje_Click" Content="Prikaži detalje" HorizontalAlignment="Right"/>
+            <Button x:Name="btnIznajmiKnjigu"  Click="btnIznajmiKnjigu_Click" Content="Iznajmi knjigu" IsEnabled="True" HorizontalAlignment="Right" Margin="0,5,0,0"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

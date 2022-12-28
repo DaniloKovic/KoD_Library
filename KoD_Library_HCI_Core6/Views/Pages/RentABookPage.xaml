@@ -1,0 +1,86 @@
+﻿<Page x:Class="KoD_Library_HCI_Core6.Views.Pages.RentABookPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KoD_Library_HCI_Core6.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="RentABookPage">
+    <Page.Resources>
+        <!-- Ovako dleklarisan stil se primjenjuje na svaku CheckBox komponentu unutar Page -->
+        <Style TargetType="CheckBox">
+            <Setter Property="BorderThickness" Value="6"/>
+            <Setter Property="BorderBrush"  Value="Black"/>
+            <Setter Property="Background"  Value="Silver"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Width" Value="28"/>
+            <Setter Property="IsChecked" Value="False"/>
+            <Setter Property="IsEnabled" Value="False"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="4"/>
+            <!-- <Setter Property="BorderBrush"  Value="Green"/> -->
+            <!-- <Setter Property="Background"  Value="LightGreen"/> -->
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Width" Value="260"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="260"></Setter>
+            <Setter Property="BorderThickness" Value="4"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="BorderThickness" Value="4"/>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="BorderThickness" Value="4"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <GroupBox  x:Name="gbRentABook" Header="Iznajmljivanje knjige" FontSize="24" Margin="10,10,10,10" BorderThickness="3" BorderBrush="Black">
+
+            <DockPanel>
+                <StackPanel x:Name="spIznajmljivanjeInfo" Margin="20,10,10,10">
+                    <StackPanel Orientation="Vertical" Margin="0,10,0,0" >
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <Label x:Name="lbNazivKnjige">Naziv Knjige:</Label>
+                            <TextBox x:Name="tbKnjiga" IsReadOnly="True" Width="588"></TextBox>
+                        </StackPanel>
+                        <StackPanel x:Name="spBookFilter" Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBox x:Name="tbBookFilter" Width="200" Margin="145,0,0,0"></TextBox>
+                            <Button x:Name="btnFilter" Width="48" Margin="5,0,0,0" Click="btnFilter_Click" >
+                                <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\magnifier.png"/>
+                            </Button>
+                            <ComboBox x:Name="cbFilterResult" Width="330" Margin="5,0,0,0" SelectionChanged="cbFilterResult_SelectionChanged"></ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <Label x:Name="lbKorisnickoIme">Korisnik:</Label>
+                            <ComboBox x:Name="cbKorisnici" Width="300" SelectedIndex="0" IsTextSearchEnabled="True" IsEditable="True"></ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                            <Label x:Name="lbDatumIznajmljivanja">Datum iznajmljivanja:</Label>
+                            <DatePicker x:Name="dpDatumIznajmljivanja" SelectedDateFormat="Short"></DatePicker>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <Label x:Name="lbDatumVracanja">Datum vraćanja:</Label>
+                            <DatePicker x:Name="dpDatumVracanja" SelectedDateFormat="Short"></DatePicker>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <Label x:Name="lbVracenaKnjjiga">Da li je vraćena:</Label>
+                            <CheckBox x:Name="chbVracena" ></CheckBox>
+                        </StackPanel>
+                        <StackPanel Margin="0,25,0,0">
+                            <Button x:Name="btnIznajmiKnjigu" Width="360" HorizontalAlignment="Left" Click="btnIznajmiKnjigu_Click">Potvrdi iznajmljivanje knjige</Button>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Image Source="C:\Users\DaK\source\repos\KoD_Library_HCI_Core6\KoD_Library_HCI_Core6\images\newBook.png" Width="130" Height="130" Margin="25"/>
+                </StackPanel>
+            </DockPanel>
+            
+        </GroupBox>
+    </Grid>
+</Page>
