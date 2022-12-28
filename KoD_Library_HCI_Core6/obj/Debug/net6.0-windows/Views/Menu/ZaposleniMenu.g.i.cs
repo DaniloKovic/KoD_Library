@@ -101,7 +101,7 @@ namespace KoD_Library_HCI_Core6.Views.Menu {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;V1.0.0.0;component/views/menu/zaposlenimenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;component/views/menu/zaposlenimenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Menu\ZaposleniMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

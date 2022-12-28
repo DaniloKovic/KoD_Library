@@ -94,8 +94,7 @@ namespace KoD_Library_HCI_Core6.Views.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;V1.0.0.0;component/views/usercontrols/navsidebaruseruc.xam" +
-                    "l", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;component/views/usercontrols/navsidebaruseruc.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\UserControls\NavSideBarUserUC.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

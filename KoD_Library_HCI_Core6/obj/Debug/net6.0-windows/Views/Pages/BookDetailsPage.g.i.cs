@@ -253,7 +253,7 @@ namespace KoD_Library_HCI_Core6.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;V1.0.0.0;component/views/pages/bookdetailspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;component/views/pages/bookdetailspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Pages\BookDetailsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -61,7 +61,7 @@ namespace KoD_Library_HCI_Core6.Views.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;V1.0.0.0;component/views/pages/aboutuspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KoD_Library_HCI_Core6;component/views/pages/aboutuspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Pages\AboutUsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
